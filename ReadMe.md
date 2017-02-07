@@ -1,8 +1,7 @@
 # PasswordInput #
 密码输入框    
 
-https://github.com/dongtaonote/PasswordInputView/blob/master/app/src/main/assets/Screenshot_2017-02-07-18-42-40.png
-
+ ![image](https://github.com/dongtaonote/PasswordInputView/blob/master/app/src/main/assets/Screenshot_2017-02-07-18-42-40.png)
 
 ## 自定义属性 ##
 
