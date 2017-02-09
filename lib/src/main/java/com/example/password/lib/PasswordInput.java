@@ -39,8 +39,8 @@ public class PasswordInput extends EditText {
     private float boxRadius; //字符方块的边角圆弧
     private int currTextLen = 0; //现在输入Text长度
     private static final InputFilter[] NO_FILTERS = new InputFilter[0];
-    private boolean cursorVisible = true;//是否显示光标
-    private boolean cipherText = false;//是否展示密文
+    private boolean cursorVisible;//是否显示光标
+    private boolean cipherText;//是否展示密文
     private float dotRadius; //圆点半径
 
     public PasswordInput(Context context) {
@@ -78,6 +78,7 @@ public class PasswordInput extends EditText {
         cipherText = ta.getBoolean(R.styleable.PasswordInput_cipherText, false);
         ta.recycle();
     }
+
 
     private void initPaint() {
         mBorderPaint = new Paint(Paint.ANTI_ALIAS_FLAG);

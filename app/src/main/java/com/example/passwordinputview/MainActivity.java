@@ -1,21 +1,24 @@
 package com.example.passwordinputview;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.password.lib.PasswordInput;
 
 public class MainActivity extends AppCompatActivity {
+    private PasswordInput passwordInputFirst;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final PasswordInput passwordInputFirst = (PasswordInput) findViewById(R.id.passwordInput_first);
+        passwordInputFirst = (PasswordInput) findViewById(R.id.passwordInput_first);
         Button btnConfirm = (Button) findViewById(R.id.btn_confirm);
 
         btnConfirm.setOnClickListener(new View.OnClickListener() {
@@ -35,5 +38,13 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        passwordInputFirst.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                InputMethodManager inputManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                inputManager.showSoftInput(passwordInputFirst, InputMethodManager.SHOW_IMPLICIT);
+            }
+        }, 300);
     }
 }
