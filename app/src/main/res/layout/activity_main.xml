@@ -22,9 +22,7 @@
         android:id="@+id/passwordInput_first"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:textSelectHandle="@android:color/transparent"
-        app:cipherText="false"
-        app:cursorColor="@android:color/transparent"
+        android:textSelectHandle="@drawable/cursor"
         tools:background="@color/colorPrimary" />
 
     <Button
